@@ -59,7 +59,7 @@ public class BudgetFragment extends Fragment {
         int price;
         try {
             price = Integer.parseInt(data.getStringExtra("price"));
-        } catch (NumberFormatException e) {
+        } catch (NullPointerException | NumberFormatException e) {
             price = 0;
         }
         if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
